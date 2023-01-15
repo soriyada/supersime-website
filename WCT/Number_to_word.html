@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+            text-align: center;
+            width: 300px;
+            padding: 25px;
+            border: 3px solid black;
+            margin: 25px;
+            height: 300px;
+            background-color: bisque;
+            animation-name: example;
+            animation-duration: 5s;
+        }
+
+        @keyframes example {
+            0% {
+                background-color: antiquewhite;
+            }
+
+            25% {
+                background-color: aquamarine;
+            }
+
+            50% {
+                background-color: aqua;
+            }
+
+            100% {
+                background-color: azure;
+            }
+        }
+
+        .input_class {
+            width: 150px;
+            height: 40px;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding-left: 10px;
+        }
+
+        .button_enter {
+            width: 90px;
+            height: 30px;
+            border: 3px solid black;
+            border-radius: 20px;
+        }
+
+        body {
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: bisque;
+            padding-top: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="center">
+            <br><br>
+            <h1>Number to Word</h1>
+            <input class="input_class" type="5ber" id="nm1" placeholder="number">
+            <br><br>
+            <input class="button_enter" type="button" value="to Words" id="optin" onclick="pldstrng()">
+            <p id="value" style="color: black;"></p>
+        </div>
+    </center>
+
+    <script>
+        function pldstrng() {
+            var k = document.getElementById("nm1").value
+            var a = String(k)
+
+            for (let i = 0; i < a.length; i++) {
+                switch (a[i]) {
+                    case "1":
+                        document.getElementById("value").innerHTML += "one" + " "
+                        break;
+                    case "2":
+                        document.getElementById("value").innerHTML += "two" + " "
+                        break;
+                    case "3":
+                        document.getElementById("value").innerHTML += "three" + " "
+                        break;
+                    case "4":
+                        document.getElementById("value").innerHTML += "four" + " "
+                        break;
+                    case "5":
+                        document.getElementById("value").innerHTML += "five" + " "
+                        break;
+                    case "6":
+                        document.getElementById("value").innerHTML += "six" + " "
+                        break;
+                    case "7":
+                        document.getElementById("value").innerHTML += "seven" + " "
+                        break;
+                    case "8":
+                        document.getElementById("value").innerHTML += "eight" + " "
+                        break;
+                    case "9":
+                        document.getElementById("value").innerHTML += "nine" + " "
+                        break;
+                    case "0":
+                        document.getElementById("value").innerHTML += "zero" + " "
+                        break;
+                    default:
+                        document.getElementById("value").innerHTML = "enter a number / digit" + " "
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
